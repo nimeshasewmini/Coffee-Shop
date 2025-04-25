@@ -9,7 +9,7 @@
     text-decoration: none;
 }
 
-:root {
+ :root {
     --main-color: #bc9667;
     --color2: #edeae3;
     --text-color: #1b1b1b;
@@ -39,13 +39,14 @@ header {
     justify-content: space-between;
     align-items: center;
     border: 1px solid black;
-    padding: 18px 100px;
+    padding: 10px 50px;
     background: var(--text-color);
     transition: 0.5s linear;
 }
 
-.logo image {
+.logo img {
     width: 60px;
+    /* Reduce from 60px to 40px or any size you want */
 }
 
 .navbar {
@@ -151,6 +152,185 @@ header {
 
 .btn:hover {
     background: #8a6f4d;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
+    gap: 1.5rem;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.about-image image {
+    border-radius: 1.8rem;
+}
+
+.about-text h2 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.about-text p {
+    font-size: 0.938rem;
+    margin: 0.5rem 0 1.1rem;
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading h2 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: repeat(auto-fit, minmax(280px, auto)); */
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.product-container .box {
+    position: relative;
+    /* border: 1px solid black; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.product-container img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    object-position: center;
+    padding: 20px;
+    background: #f1f1f1;
+    border-radius: 0.5rem;
+}
+
+.product-container .box h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0.5rem;
+}
+
+.product-container .box .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.product-container .box .content span {
+    padding: 0 1rem;
+    color: var(--bg-color);
+    background-color: var(--main-color);
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.product-container .box .content a {
+    border: 1px solid var(--main-color);
+    padding: 0 1rem;
+    color: var(--text-color);
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.product-container .box .content a:hover {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    transition: 0.2s all linear;
+    /* transition-duration: 1s;
+    transition-property: background-color;
+    transition-timing-function: linear;
+    transition-delay: linear; */
+}
+
+
+/* .customers-container {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+
+
+/* Customer Section */
+
+.customers {
+    background: #f8f4f1;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.customers .heading h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #4b2e2e;
+    font-weight: bold;
+}
+
+.customers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.customers-container .box {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 320px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.customers-container .box:hover {
+    transform: translateY(-10px);
+    background-color: var(--main-color);
+}
+
+.stars {
+    color: var(--main-color);
+    margin-bottom: 15px;
+}
+
+.customers-container .box:hover {
+    transform: translateY(-10px);
+    background-color: var(--main-color);
+    .stars {
+        color: var(--bg-color);
+        margin-bottom: 15px;
+    }
+    p {
+        color: #1b1b1b;
+    }
+}
+
+.customers-container .box p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.customers-container .box h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.customers-container .box img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #cba16b;
+    margin-top: 10px;
 }
 
 
